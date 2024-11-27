@@ -15,6 +15,7 @@
 
 .heading h1 {
     color: white;
+    font-size: 8vw;
 }
 
 .navigation {
@@ -22,6 +23,7 @@
     justify-content: center;
     gap: 15px;
     color: white;
+    font-size: 3.5vw;
 }
 
 .navigation a {
@@ -32,4 +34,20 @@
 
 .navigation a:hover {
     color:red
+}
+
+.banner {
+    position: relative;
+}
+
+.txt_overlay {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 75%;
+    left: 50%;
+    color: white;
+    font-size: 7vw;
+    text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+    font-style: italic;
 }
