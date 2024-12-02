@@ -4,22 +4,30 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: 'SiteFont';
+    src: url('fonts/RegentiaNeoveleRegular.ttf') format('truetype');
+}
+
 .heading {
     position: fixed;
     display: flex;
     background-color: #4B2E1C;
-    flex-direction: column;
-    text-align: center;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     padding: 10px;
     gap: 15px;
     padding-bottom: 25px;
     width: 100%;
     z-index: 1000;
+    opacity: 80%;
 }
 
 .heading h1 {
     color: white;
     font-size: 3vw;
+    font-family: 'CustomFont', sans-serif;
 }
 
 .navigation {
@@ -28,6 +36,7 @@
     gap: 15px;
     color: white;
     font-size: 2vw;
+    font-family: 'CustomFont', sans-serif;
 }
 
 .navigation a {
@@ -58,6 +67,7 @@
 
 .content {
     padding: 4vw;
+    font-family: 'CustomFont', sans-serif;
 }
 
 .content h2 {
@@ -71,7 +81,6 @@
 
 .info_section {
     padding: 3vw;
-    background-color: #E0E0E0;
     border-radius: 20px;
     display: flex;
     gap: 5vw;
