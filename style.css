@@ -55,7 +55,7 @@
 }
 
 .navigation a:hover {
-    color:red
+    color: #D4AF37
 }
 
 .banner {
@@ -76,7 +76,7 @@
 
 .main {
     font-family: 'MainFont', sans-serif;
-    background-color: red;
+    background-color: #4B2E2E;
     display: flex;
     justify-content: space-around;
     padding-top: 2vw;
@@ -100,31 +100,29 @@
     flex-direction: column;
     align-items: center;
     width: 43%;
-    background-color: blue;
-    gap: 1.5vw;
+    gap: 1vw;
 }
 
 .button-container {
     display: flex;
     flex-direction: row;
-    background-color: orange;
     justify-content: space-between;
     width: 75%;
 }
 
 .buttonLeft {
-    font-family: 'SiteFont', sans-serif;
+    font-family: 'HeaderFont', sans-serif;
     background-color: #D4AF37;
-    color: #4B2E2E;
+    color: black;
     padding: .4vw 4vw;
     border: none;
     border-radius: 8%;
     font-size: 1.3vw;
-    transition: color 0.5s ease;
+    transition: background-color 0.5s ease;
 }
 
 .buttonLeft:hover {
-    color: black;
+    background-color: #F5F5DC;
 }
 
 .contentRight {
@@ -132,6 +130,5 @@
     flex-direction: column;
     align-items: center;
     width: 43%;
-    background-color: green;
-    gap: 1.5vw;
+    gap: 1vw;
 }
