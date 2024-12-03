@@ -7,56 +7,63 @@
  * Date (curr): 11/27/2024
  */
 
-function loadContent(file) {
-    const container = document.getElementById("content-container");
-  
-    fetch(file)
-      .then(response => {
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        return response.text();
-      })
-      .then(htmlContent => {
-        container.innerHTML = htmlContent;
-      })
-      .catch(error => {
-        console.error("Error loading content:", error);
-        container.innerHTML = "<p>Failed to load content.</p>";
-      });
-  }
-
 document.addEventListener("DOMContentLoaded", () => {
-    const header = document.querySelector(".heading");
+    makeInvis(document.querySelector(".heading"))
+    loadPage('home')
+});
 
-    const handleScroll = () => {
-        if (window.scrollY < 50) {
-            header.classList.add("transparent");
-        } else {
-            header.classList.remove("transparent");
-        }
-    };
+function makeInvis(header) {
+  const handleScroll = () => {
+    if (window.scrollY < 50) {
+        header.classList.add("transparent");
+    } else {
+        header.classList.remove("transparent");
+    }
+  };
+  window.addEventListener("scroll", handleScroll);
+  handleScroll();
+}
 
-    window.addEventListener("scroll", handleScroll);
+function loadPage(pageName) {
+  fetch(`${pageName}.html`)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.text();
+    })
+    .then(data => {
+      document.getElementById('yeet').innerHTML = data;
+    })
+    .catch(error => {
+      console.error(`Could not fetch ${pageName}.html...`, error);
+  });
+}
 
-    // Run the function on page load
-    handleScroll();
+document.getElementById('load-home').addEventListener('click', function(event) {
+  event.preventDefault();
+  const pageName = 'home';
+  loadPage(pageName);
+  window.history.pushState({}, '', this.getAttribute('href'));
+});
 
-    loadContent("home.html");
+document.getElementById('load-about').addEventListener('click', function(event) {
+  event.preventDefault();
+  const pageName = this.getAttribute('href').substring(1);
+  loadPage(pageName);
+  window.history.pushState({}, '', this.getAttribute('href'));
+});
 
-    document.getElementById("load-home").addEventListener("click", () => {
-        loadContent("home.html");
-    });
+document.getElementById('load-media').addEventListener('click', function(event) {
+  event.preventDefault();
+  const pageName = this.getAttribute('href').substring(1);
+  loadPage(pageName);
+  window.history.pushState({}, '', this.getAttribute('href'));
+});
 
-    document.getElementById("load-favorites").addEventListener("click", () => {
-        loadContent("favorites.html");
-    });
-
-    document.getElementById("load-history").addEventListener("click", () => {
-        loadContent("history.html");
-    });
-
-    document.getElementById("load-citations").addEventListener("click", () => {
-        loadContent("citations.html");
-    });
+document.getElementById('load-sources').addEventListener('click', function(event) {
+  event.preventDefault();
+  const pageName = this.getAttribute('href').substring(1);
+  loadPage(pageName);
+  window.history.pushState({}, '', this.getAttribute('href'));
 });
