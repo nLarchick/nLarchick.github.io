@@ -33,7 +33,7 @@ function loadPage(pageName) {
       return response.text();
     })
     .then(data => {
-      document.getElementById('yeet').innerHTML = data;
+      document.getElementById('content').innerHTML = data;
     })
     .catch(error => {
       console.error(`Could not fetch ${pageName}.html...`, error);
