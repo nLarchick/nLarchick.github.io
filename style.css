@@ -103,14 +103,14 @@
     gap: 1vw;
 }
 
-.button-container {
+.button-containerL {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     width: 75%;
 }
 
-.buttonLeft {
+.button {
     font-family: 'HeaderFont', sans-serif;
     background-color: #D4AF37;
     color: black;
@@ -121,7 +121,7 @@
     transition: background-color 0.5s ease;
 }
 
-.buttonLeft:hover {
+.button:hover {
     background-color: #F5F5DC;
 }
 
@@ -131,4 +131,11 @@
     align-items: center;
     width: 43%;
     gap: 1vw;
+}
+
+.button-containerR {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 75%;
 }
