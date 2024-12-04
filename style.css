@@ -140,6 +140,91 @@
     width: 75%;
 }
 
-.temporaryShi {
-    background-color: red;
+.aboutContainer {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    align-items: center;
+    font-family: 'HeaderFont', sans-serif;
+}
+
+.aboutContainer p {
+    text-align: left;
+    font-size: 1.6vw;
+}
+
+.aboutContainer h1 {
+    font-size: 4vw;
+    color: white;
+}
+
+.sectionContainer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+}
+
+.sectionLeft {
+    width: 50%;
+    text-align: justify;
+    
+}
+
+.sectionRight {
+    width: 50%;
+    text-align: center;
+}
+
+.videosContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 85%;
+}
+
+.sides {
+    width: 48%;
+}
+
+.vidChunk {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 3vw;
+}
+
+.vidChunk h1 {
+    color: white;
+}
+
+.mediaButton {
+    background-color: #D4AF37; /* Black background */
+    color: #800020; /* White text */
+    border: 2px solid #800020; /* White border */
+    border-radius: 10px; /* Rounded edges */
+    padding: 10px 20px; /* Padding for a better button look */
+    font-size: 16px; /* Adjust text size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, color 0.3s; /* Smooth color transition on hover */
+}
+
+.mediaButton:hover {
+    background-color: #800020; /* Inverse to white background */
+    color: white; /* Inverse to black text */
+}
+
+.sourcesContainer {
+    display: flex;
+    flex-direction: column;
+    background-color: #F5F5DC;
+    width: 60%;
+    align-items: center;
+    border-radius: 10%;
+    padding: 30px;
+}
+
+.sourcesContainer h1, ul, li {
+    color: black;
 }
