@@ -8,6 +8,6 @@ function as a simple project.
 ## Features
 [to be added]
 
-## Setup & Installatino
+## Setup & Installation
 [to be added]
 
