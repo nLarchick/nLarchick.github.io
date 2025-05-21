@@ -6,3 +6,94 @@
     font-family: "Libre Franklin", sans-serif;
     box-sizing: border-box;
 }
+
+body {
+    background-color: #361907;
+    color: white;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 80px;
+}
+
+nav .nav_logo {
+    height: 80px;
+    background-color: #012A36;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    border-radius: 20px;
+}
+
+nav .nav_logo a {
+    text-decoration: none;
+    color: white;
+    font-size: 2.5em;
+    font-weight: 700;
+    transition: all 0.4s ease;
+}
+
+nav .nav_logo i {
+    font-weight: 300;
+}
+
+nav .nav_logo a:hover {
+    letter-spacing: 3px;
+}
+
+nav .nav_links {
+    height: 80px;
+    background-color: #012A36;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    border-radius: 20px;
+    gap: 20px;
+}
+
+nav .nav_links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5em;
+    font-weight: 500;
+    transition: all 0.4s ease;
+    border-bottom: 2px solid transparent;
+}
+
+nav .nav_links a:hover {
+    border-bottom: 2px solid white;
+}
+
+nav .nav_socials {
+    height: 80px;
+    background-color: #012A36;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+    border-radius: 20px;
+    gap: 10px;
+}
+
+nav .nav_socials .mobile_menu {
+    display: none;
+}
+
+nav .nav_socials .mobile_menu i,
+nav .nav_socials a {
+    text-decoration: none;
+    color: white;
+    font-size: 3em;
+    transition: all 0.4s ease;
+    border-bottom: 2px solid transparent;
+    padding: 0 5px;
+    border-radius: 20px;
+}
+
+nav .nav_socials .mobile_menu i:hover,
+nav .nav_socials a:hover {
+    background-color: white;
+    color: black;
+}
